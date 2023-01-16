@@ -39,7 +39,7 @@ const initialServices: IService[] = [
 
 export class ServiceStore {
   serviceList: IService[] = initialServices;
-  intervalId: number | null = null;
+  intervalId: ReturnType<typeof setInterval> | null = null;
   rootStore: IRootStore;
 
   constructor(rootStore: IRootStore) {
@@ -49,6 +49,7 @@ export class ServiceStore {
       resetOtp: action,
       serviceListValue: computed,
       countDown: action,
+      updateServiceList: action,
     });
     this.rootStore = rootStore;
   }
@@ -95,5 +96,9 @@ export class ServiceStore {
     if (service) {
       service.time = time;
     }
+  }
+
+  updateServiceList(list: IService[]) {
+    this.serviceList = list;
   }
 }
