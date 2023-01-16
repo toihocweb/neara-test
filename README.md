@@ -17,7 +17,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd propine-test
+  cd neara-test
 ```
 
 Install dependencies
