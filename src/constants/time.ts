@@ -1,1 +1,1 @@
-export const DEFAULT_TIME = 3;
+export const DEFAULT_TIME = 60;
